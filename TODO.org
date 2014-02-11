@@ -1,0 +1,8 @@
+
+* TODO Get some auto package installment thing up and running
+  Check these out:
+  [[http://stackoverflow.com/questions/13866848/how-to-save-a-list-of-all-the-installed-packages-in-emacs-24][How to get currently installed packages.]]
+  [[http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name][And how to do it]]
+
+* TODO Restructuring? 
+  Eh, splitting things up into files and the like.
