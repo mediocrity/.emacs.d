@@ -26,7 +26,7 @@
            (local-file (file-relative-name
                         temp-file
                         (file-name-directory buffer-file-name))))
-      (list "elintlake8" (list local-file))))
+      (list "~/.emacs.d/scripts/elintlake8.py" (list local-file))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pylint-init)))
 
