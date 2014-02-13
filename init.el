@@ -22,6 +22,7 @@
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 113 :width normal)))))
 
 
+(setq visible-bell 1)
 (put 'narrow-to-region 'disabled nil)
 (setq org-src-fontify-natively t)
 (put 'dired-find-alternate-file 'disabled nil)
