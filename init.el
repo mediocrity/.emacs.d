@@ -1,10 +1,10 @@
 (column-number-mode t)
 (setq inhibit-startup-screen t)
-(scroll-bar-mode nil)
+(scroll-bar-mode -1)
 (show-paren-mode t)
 (size-indication-mode t)
-(tool-bar-mode nil)
-(tooltip-mode nil)
+(tool-bar-mode -1)
+(tooltip-mode -1)
 (menu-bar-mode -1)
 (setq visible-bell 1)
 
