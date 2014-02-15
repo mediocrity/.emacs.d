@@ -28,7 +28,6 @@
   )
 
 
-
 ;; IDO mode
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -143,24 +142,11 @@
 (global-set-key (kbd "C-<f1>") (lambda () (find-file "~/.emacs.d/init.el")))
 
 
-;; CSS
-(add-hook 'css-mode-hook 'rainbow-mode) ; i know what you are thinking
-
-;; GOLANG
-(require 'go-mode)
-
-;; Emacs lisp
-(add-hook 'emacs-lisp-mode-hook 'flyspell-prog-mode)
-
-;; TEXT
-(add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'text-mode-hook 'auto-fill-mode)
-
-
 ;; Loading init files
 (setq custom-file "~/.emacs.d/init_custom.el")
 (load custom-file)
 
 (load "~/.emacs.d/init_python.el")
+(load "~/.emacs.d/init_hooks.el")
 
 
