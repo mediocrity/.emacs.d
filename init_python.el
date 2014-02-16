@@ -5,6 +5,7 @@
 
 
 ;; PYTHON
+(add-hook 'python-mode-hook 'flyspell-prog-mode)
 (add-hook 'python-mode-hook 'auto-complete-mode)
 (add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'python-mode-hook 'linum-mode)
