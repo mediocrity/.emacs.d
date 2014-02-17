@@ -19,7 +19,7 @@
 ;; (setq flymake-python-pyflakes-executable "flake8")
 
 
-;; pylint & elintlake8
+;; flake8
 (when (load "flymake" t)
   (defun flymake-pylint-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
@@ -27,7 +27,7 @@
            (local-file (file-relative-name
                         temp-file
                         (file-name-directory buffer-file-name))))
-      (list "~/.emacs.d/scripts/elintlake8.py" (list local-file))))
+      (list "flake8" (list local-file))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pylint-init)))
 
