@@ -8,6 +8,8 @@
 (menu-bar-mode -1)
 (setq visible-bell 1)
 
+(electric-pair-mode)
+
 
 (put 'narrow-to-region 'disabled nil)
 (setq org-src-fontify-natively t)
