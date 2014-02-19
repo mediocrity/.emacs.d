@@ -56,6 +56,6 @@
 
 (global-set-key (kbd "M-c") 'invert-capitalization)
 (global-set-key (kbd "C-x Q") 'my-macro-query)
-(global-set-key (kbd "C-c q w e") 'reload_init_file)
 
-(global-set-key (kbd "C-<f1>") (lambda () (find-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-c q w e") (lambda () (interactive) (load-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-<f1>") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))

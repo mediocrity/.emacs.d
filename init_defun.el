@@ -35,11 +35,6 @@
   )
 
 
-(defun reload_init_file () 
-  (interactive) 
-  (load-file "~/.emacs.d/init.el"))
-
-
 ;; Emacs Tranparency: http://www.emacswiki.org/emacs/TransparentEmacs
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
 (set-frame-parameter (selected-frame) 'alpha '(100 100))
