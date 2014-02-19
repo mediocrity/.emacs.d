@@ -53,15 +53,8 @@
     (browse-url-firefox (format url query)))))
 
 
-(defun make-browse (base-url)
-  (lexical-let ((url base-url))
-  (lambda (query)
-    (interactive "P")
-    (browse-url-firefox url))))
-
-
 (defun invert-capitalization ()
-  "This is a test"
+  "This is a test" ; Really?
   (interactive)
   (setq case-fold-search nil) ;; Is there a better way
   (let (pos1 pos2 bounds word)
@@ -82,12 +75,6 @@
   (load-file "~/.emacs.d/init.el"))
 
 
-(defun alarm (minutes)
-  "Play preset sound in X minutes."
-  (interactive "sHow may minutes to alarm?")
-  (run-at-time (format "%s min" minutes) nil (lambda ()
-					       (play-sound-file "/path/to/sound/file"))))
-
 ;; Emacs Tranparency: http://www.emacswiki.org/emacs/TransparentEmacs
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
 (set-frame-parameter (selected-frame) 'alpha '(100 100))
@@ -107,8 +94,6 @@
 
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 
-(global-set-key (kbd "C-c b k") (make-browse "https://duckduckgo.com"))
-(global-set-key (kbd "C-c b g") (make-search "https://www.google.com/search?q=%s"))
 (global-set-key (kbd "<f11>") (make-search "https://www.google.com/search?q=%s"))
 
 (global-set-key (kbd "<f9>") 'local-set-key)
