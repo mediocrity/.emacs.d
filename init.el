@@ -10,7 +10,6 @@
 
 (electric-pair-mode)
 
-
 (put 'narrow-to-region 'disabled nil)
 (setq org-src-fontify-natively t)
 (put 'dired-find-alternate-file 'disabled nil)
@@ -22,36 +21,16 @@
 (setq auto-save-default nil) ; I save too often anyway.
 
 
-;; Melpa
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  )
-
-
 ;; IDO mode
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
 
-;; yasnippet
-(add-to-list 'load-path
-	     "~/.emacs.d/elpa/yasnippet-20140106.1009")
-(require 'yasnippet)
-(yas-global-mode 1)
-(setq yas/indent-line nil)
 
 ;; Flymake
 ; http://stackoverflow.com/questions/11269937/syntax-highlighting-conflicts-with-flymake-errline-color-in-emacs
 (custom-set-faces '(flymake-errline ((((class color)) (:background "Black")))) 
 '(flymake-warnline ((((class color)) (:background "Gray50")))))
-
-(window-numbering-mode)
-
-(require 'move-text)
-(move-text-default-bindings)
-
 
 
 ;; Defined functions
@@ -109,8 +88,6 @@
   (run-at-time (format "%s min" minutes) nil (lambda ()
 					       (play-sound-file "/path/to/sound/file"))))
 
-
-
 ;; Emacs Tranparency: http://www.emacswiki.org/emacs/TransparentEmacs
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
 (set-frame-parameter (selected-frame) 'alpha '(100 100))
@@ -148,6 +125,7 @@
 (setq custom-file "~/.emacs.d/init_custom.el")
 (load custom-file)
 
+(load "~/.emacs.d/init_external.el")
 (load "~/.emacs.d/init_python.el")
 (load "~/.emacs.d/init_hooks.el")
 
