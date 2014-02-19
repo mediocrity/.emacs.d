@@ -7,3 +7,6 @@
 ;; text-mode
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
+
+;; html
+(add-hook 'html-mode-hook 'turn-off-auto-fill)
