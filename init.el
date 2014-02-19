@@ -45,7 +45,7 @@
 
 
 
-;; Global editing commands
+;; Global bindings
 
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 
