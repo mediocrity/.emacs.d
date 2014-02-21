@@ -1,3 +1,0 @@
-
-* TODO Restructuring? 
-  Eh, splitting things up into files and the like.
