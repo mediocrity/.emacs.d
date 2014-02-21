@@ -1,15 +1,5 @@
 ;; Defined functions
 
-(defun my-macro-query (arg) ; http://www.emacswiki.org/emacs/KeyboardMacros#toc5
-  "Prompt for input using minibuffer during kbd macro execution.
-    With prefix argument, allows you to select what prompt string to use.
-    If the input is non-empty, it is inserted at point."
-  (interactive "P")
-  (let* ((prompt (if arg (read-from-minibuffer "PROMPT: ") "Input: "))
-	 (input (minibuffer-with-setup-hook (lambda () (kbd-macro-query t))
-		  (read-from-minibuffer prompt))))
-    (unless (string= "" input) (insert input))))
-
 
 (defun make-search (base-url)
   (lexical-let ((url base-url))
