@@ -2,8 +2,6 @@
 
 ; list the packages you want
 (setq package-list '(
-		     flymake-python-pyflakes
-		     flymake-easy
 		     go-mode
 		     jedi
 		     auto-complete

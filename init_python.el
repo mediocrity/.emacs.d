@@ -1,25 +1,7 @@
-;; Emacs Python initialization 
-
-;; kv-mode improvement
-(add-hook 'kivy-mode-hook (lambda () (setq indent-tabs-mode nil)))
+;; Python initialization 
 
 
-;; PYTHON
-(add-hook 'python-mode-hook 'flyspell-prog-mode)
-(add-hook 'python-mode-hook 'auto-complete-mode)
-(add-hook 'python-mode-hook 'jedi:setup)
-(add-hook 'python-mode-hook 'linum-mode)
-
-
-;; Flymake
-
-;; Pyflakes 
-;; (require 'flymake-python-pyflakes)
-;; (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
-;; (setq flymake-python-pyflakes-executable "flake8")
-
-
-;; flake8
+;; Flymake with flake8
 (when (load "flymake" t)
   (defun flymake-pylint-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
@@ -31,10 +13,7 @@
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pylint-init)))
 
-(add-hook 'python-mode-hook '(lambda () (flymake-mode)))
-
-
-;; from: http://docs.pylint.org/ide-integration.html#using-pylint-thru-flymake-in-emacs
+;; http://docs.pylint.org/ide-integration.html#using-pylint-thru-flymake-in-emacs
 (defun show-fly-err-at-point ()
   "If the cursor is sitting on a flymake error, display the message in the minibuffer"
   (require 'cl)
@@ -48,9 +27,17 @@
 (add-hook 'post-command-hook 'show-fly-err-at-point)
 
 
-;; Python mode keys and macros
-(require 'python)
+;; hooks
+(add-hook 'python-mode-hook 'flyspell-prog-mode)
+(add-hook 'python-mode-hook 'auto-complete-mode)
+(add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook 'linum-mode)
+(add-hook 'python-mode-hook '(lambda () (flymake-mode)))
 
+;; bindings
+(require 'python)
 (define-key python-mode-map (kbd "<f5>") "import pdb; pdb.set_trace()")
 (define-key python-mode-map (kbd "<f8>") 'flymake-goto-next-error)
 
+;; kv-mode improvement
+(add-hook 'kivy-mode-hook (lambda () (setq indent-tabs-mode nil)))
