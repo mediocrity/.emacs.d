@@ -7,12 +7,9 @@
 (tooltip-mode -1)
 (menu-bar-mode -1)
 (setq visible-bell 1)
-
-(electric-pair-mode)
-
-(put 'narrow-to-region 'disabled nil)
+(setq disabled-command-function nil)
 (setq org-src-fontify-natively t)
-(put 'dired-find-alternate-file 'disabled nil)
+(electric-pair-mode)
 
 
 ;; Backups and auto-saves
@@ -28,10 +25,8 @@
 
 
 ;; Flymake
-; http://stackoverflow.com/questions/11269937/syntax-highlighting-conflicts-with-flymake-errline-color-in-emacs
 (custom-set-faces '(flymake-errline ((((class color)) (:background "Black")))) 
 '(flymake-warnline ((((class color)) (:background "Gray50")))))
-
 
 
 ;; Loading init files
@@ -44,17 +39,14 @@
 (load "~/.emacs.d/init_defun.el")
 
 
-
 ;; Global bindings
 
-(global-set-key (kbd "C-c t") 'toggle-transparency)
-
 (global-set-key (kbd "<f11>") (make-search "https://www.google.com/search?q=%s"))
+(global-set-key (kbd "C-c t") 'toggle-transparency)
+(global-set-key (kbd "M-c") 'invert-capitalization)
 
 (global-set-key (kbd "<f9>") 'local-set-key)
 (global-set-key (kbd "C-<f9>") 'global-set-key)
-
-(global-set-key (kbd "M-c") 'invert-capitalization)
 
 (global-set-key (kbd "C-c q w e") (lambda () (interactive) (load-file "~/.emacs.d/init.el")))
 (global-set-key (kbd "C-<f1>") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
