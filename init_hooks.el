@@ -8,5 +8,8 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
-;; html
+;; html-mode
 (add-hook 'html-mode-hook 'turn-off-auto-fill)
+
+;; kv-mode 
+(add-hook 'kivy-mode-hook (lambda () (setq indent-tabs-mode nil)))

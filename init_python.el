@@ -1,6 +1,5 @@
 ;; Python initialization 
 
-
 ;; Flymake with flake8
 (when (load "flymake" t)
   (defun flymake-pylint-init ()
@@ -38,6 +37,3 @@
 (require 'python)
 (define-key python-mode-map (kbd "<f5>") "import pdb; pdb.set_trace()")
 (define-key python-mode-map (kbd "<f8>") 'flymake-goto-next-error)
-
-;; kv-mode improvement
-(add-hook 'kivy-mode-hook (lambda () (setq indent-tabs-mode nil)))
