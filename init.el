@@ -50,3 +50,6 @@
 
 (global-set-key (kbd "C-c q w e") (lambda () (interactive) (load-file "~/.emacs.d/init.el")))
 (global-set-key (kbd "C-<f1>") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
+
+(global-set-key (kbd "C-c d") 'magit-diff-unstaged)
+(global-set-key (kbd "C-c s") 'magit-status)
