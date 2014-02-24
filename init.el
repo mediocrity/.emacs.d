@@ -53,3 +53,6 @@
 
 (global-set-key (kbd "C-c d") 'magit-diff-unstaged)
 (global-set-key (kbd "C-c s") 'magit-status)
+
+(global-set-key (kbd "C-c e") 'eshell)
+(global-set-key (kbd "C-c t") 'shell)
