@@ -41,18 +41,18 @@
 
 ;; Global bindings
 
-(global-set-key (kbd "<f11>") (make-search "https://www.google.com/search?q=%s"))
+(global-set-key (kbd "C-c g") (make-search "https://www.google.com/search?q=%s"))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 (global-set-key (kbd "M-c") 'invert-capitalization)
 
-(global-set-key (kbd "S-<f5>") 'local-set-key) 
-(global-set-key (kbd "C-<f5>") 'global-set-key)
+(global-set-key (kbd "S-<f4>") 'local-set-key) 
+(global-set-key (kbd "C-<f4>") 'global-set-key)
 
 (global-set-key (kbd "C-c q w e ") (lambda () (interactive) (load-file "~/.emacs.d/init.el")))
-(global-set-key (kbd "C-c q w i") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-c i n i t") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
 
 (global-set-key (kbd "C-c d") 'magit-diff-unstaged)
 (global-set-key (kbd "C-c s") 'magit-status)
 
-(global-set-key (kbd "C-c e") 'eshell)
-(global-set-key (kbd "C-c t") 'shell)
+(global-set-key (kbd "<f9>") 'eshell)
+(global-set-key (kbd "C-<f9>") 'shell)
