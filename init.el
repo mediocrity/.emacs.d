@@ -56,3 +56,7 @@
 
 (global-set-key (kbd "<f9>") 'eshell)
 (global-set-key (kbd "C-<f9>") 'shell)
+
+
+;; Initial Mode
+(setq initial-major-mode 'eshell)
