@@ -57,6 +57,14 @@
 (global-set-key (kbd "<f9>") 'eshell)
 (global-set-key (kbd "C-<f9>") 'shell)
 
+(global-set-key (kbd "<f7>") 'kill-this-buffer)
+
+(global-set-key (kbd "<f8>") 'point-to-register)
+(global-set-key (kbd "C-<f8>") 'jump-to-register)
+
+(global-set-key (kbd "<f5>") 'yas-visit-snippet-file)
+(global-set-key (kbd "<C-f5>") 'yas-new-snippet)
+
 
 ;; Initial Mode
 (setq initial-major-mode 'eshell)
