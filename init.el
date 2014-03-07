@@ -68,3 +68,6 @@
 
 ;; Initial Mode
 (setq initial-major-mode 'eshell)
+
+;; Font
+(set-face-attribute 'default nil :font "DejaVu Sans Mono" :height 100)
