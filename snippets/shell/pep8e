@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: pep8 extended
+# key: pep8e
+# --
+pep8 ${1:--statistics} ${2:--ignore=E501} .$0

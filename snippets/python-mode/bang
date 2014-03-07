@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: bangbang
+# key: !!
+# --
+#!/usr/bin/env python
