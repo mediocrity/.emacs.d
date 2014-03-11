@@ -19,6 +19,7 @@
 		     rainbow-mode
 		     window-numbering
 		     yasnippet
+		     py-autopep8
 		     ))
 
 

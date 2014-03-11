@@ -26,6 +26,9 @@
    "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
   )
 
+;; autopep8
+(setq py-autopep8-options '("--max-line-length=120"))
+
 ;; hooks
 (add-hook 'python-mode-hook 'flyspell-prog-mode)
 (add-hook 'python-mode-hook 'auto-complete-mode)
@@ -37,3 +40,4 @@
 (require 'python)
 (define-key python-mode-map (kbd "C-c p d b") "import pdb; pdb.set_trace()")
 (define-key python-mode-map (kbd "C-c n e") 'flymake-goto-next-error)
+(define-key python-mode-map (kbd "C-c p e p") 'py-autopep8)
