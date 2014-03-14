@@ -20,6 +20,7 @@
 		     window-numbering
 		     yasnippet
 		     py-autopep8
+		     flymake-jshint
 		     ))
 
 

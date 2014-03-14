@@ -15,7 +15,9 @@
 (add-hook 'kivy-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
 ;; javascript-mode
-(add-hook 'js-mode-hook (lambda () (setq indent-tabs-mode nil)))
+(add-hook 'js-mode-hook (lambda ()
+			  (setq indent-tabs-mode nil)
+			  (flymake-jshint-load)))
 
 ;; flymake
 (add-hook 'post-command-hook 'show-fly-err-at-point)
