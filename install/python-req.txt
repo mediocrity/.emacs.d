@@ -1,0 +1,5 @@
+autopep8>=1.0
+epc>=0.0.5
+flake8>=2.1.0
+ipython>=1.2.0
+jedi>=0.7.0
