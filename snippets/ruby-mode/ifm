@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# --
+if __FILE__ == \$0
+  ${1:main()}
+end
