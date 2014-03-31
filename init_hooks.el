@@ -17,7 +17,8 @@
 ;; javascript-mode
 (add-hook 'js-mode-hook (lambda ()
 			  (setq indent-tabs-mode nil)
-			  (flymake-jshint-load)))
+			  (flymake-jshint-load)
+			  (linum-mode)))
 
 ;; flymake
 (add-hook 'post-command-hook 'show-fly-err-at-point)
