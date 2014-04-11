@@ -41,3 +41,4 @@
 (define-key python-mode-map (kbd "C-c p d b") "import pdb; pdb.set_trace()")
 (define-key python-mode-map (kbd "C-c n e") 'flymake-goto-next-error)
 (define-key python-mode-map (kbd "C-c p e p") 'py-autopep8)
+(define-key python-mode-map (kbd "C-c h") 'helm-pydoc)
