@@ -22,3 +22,7 @@
 
 ;; flymake
 (add-hook 'post-command-hook 'show-fly-err-at-point)
+
+;; c language
+(add-hook 'c-mode-hook 'linum-mode)
+
