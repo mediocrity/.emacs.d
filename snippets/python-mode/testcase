@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: testcase
+# key: testcase
+# --
+class Test${1:Something}(unittest.TestCase):
+
+    def setUp(self):
+        pass
+
+    def cleanUp(self):
+        pass
+
+    def test_${2:Something}(self):
+        $0pass
