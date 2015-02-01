@@ -1,0 +1,36 @@
+
+;; Some tab resultion code
+;; http://www.emacswiki.org/emacs/CompanyMode
+(add-hook 'csharp-mode-hook 'linum-mode)
+(add-hook 'csharp-mode-hook (lambda () (setq indent-tabs-mode nil)))
+
+(defun check-expansion ()
+  (save-excursion
+    (if (looking-at "\\_>") t
+      (backward-char 1)
+      (if (looking-at "\\.") t
+	(backward-char 1)
+	(if (looking-at "->") t nil)))))
+
+(defun do-yas-expand ()
+  (let ((yas/fallback-behavior 'return-nil))
+    (yas/expand)))
+
+(defun tab-indent-or-complete ()
+  (interactive)
+  (if (minibufferp)
+      (minibuffer-complete)
+    (if (or (not yas/minor-mode)
+	    (null (do-yas-expand)))
+	(if (check-expansion)
+	    (omnisharp-auto-complete)
+	  (indent-for-tab-command)))))
+
+;; hooks
+(add-hook 'csharp-mode-hook 'linum-mode)
+(add-hook 'csharp-mode-hook 'omnisharp-mode)
+
+;; keys
+(require 'csharp-mode)
+(define-key csharp-mode-map [tab] 'tab-indent-or-complete)
+(define-key csharp-mode-map (kbd "C-c r") 'omnisharp-rename)
