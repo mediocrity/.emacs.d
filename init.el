@@ -68,6 +68,16 @@
 (global-set-key (kbd "<C-f5>") 'yas-new-snippet)
 
 
+(global-set-key (kbd "C-c w e") (lambda () (interactive)
+				  (switch-to-buffer "english-writing-buffer")
+				  (text-mode)))
+
+(global-set-key (kbd "C-c w s") (lambda () (interactive)
+				  (switch-to-buffer "svensk-skrift-buffer")
+				  (text-mode)
+				  (ispell-change-dictionary "svenska")))
+
+
 ;; Initial Mode
 (setq initial-major-mode 'eshell)
 
