@@ -38,6 +38,7 @@
 (load "~/.emacs.d/init_hooks.el")
 (load "~/.emacs.d/init_defun.el")
 (load "~/.emacs.d/init_csharp.el")
+(load "~/.emacs.d/init_local.el")
 
 
 ;; Global bindings
