@@ -53,16 +53,17 @@
 (global-set-key (kbd "C-c q w e ") (lambda () (interactive) (load-file "~/.emacs.d/init.el")))
 (global-set-key (kbd "C-c i n i t") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
 
-(global-set-key (kbd "C-c d") 'magit-diff-unstaged)
-(global-set-key (kbd "C-c s") 'magit-status)
+(global-set-key (kbd "C-c m d u") 'magit-diff-unstaged)
+(global-set-key (kbd "C-c m d s") 'magit-diff-staged)
+(global-set-key (kbd "C-c m s") 'magit-status)
 
 (global-set-key (kbd "<f9>") 'eshell)
 (global-set-key (kbd "C-<f9>") 'shell)
 
 (global-set-key (kbd "<f7>") 'kill-this-buffer)
 
-(global-set-key (kbd "<f8>") 'point-to-register)
-(global-set-key (kbd "C-<f8>") 'jump-to-register)
+(global-set-key (kbd "C-<f8>") 'point-to-register)
+(global-set-key (kbd "<f8>") 'jump-to-register)
 
 (global-set-key (kbd "<f5>") 'yas-visit-snippet-file)
 (global-set-key (kbd "<C-f5>") 'yas-new-snippet)
