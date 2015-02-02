@@ -22,6 +22,8 @@
 		     py-autopep8
 		     flymake-jshint
 		     helm-pydoc
+		     omnisharp
+		     csharp-mode
 		     ))
 
 
