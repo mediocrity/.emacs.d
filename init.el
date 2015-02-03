@@ -73,6 +73,8 @@
 				  (text-mode)
 				  (ispell-change-dictionary "svenska")))
 
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
 
 ;; Initial Mode
 (setq initial-major-mode 'eshell)

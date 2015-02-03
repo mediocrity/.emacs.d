@@ -24,6 +24,7 @@
 		     helm-pydoc
 		     omnisharp
 		     csharp-mode
+		     ace-jump-mode
 		     ))
 
 
