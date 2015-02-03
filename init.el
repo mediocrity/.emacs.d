@@ -63,7 +63,6 @@
 (global-set-key (kbd "<f5>") 'yas-visit-snippet-file)
 (global-set-key (kbd "<C-f5>") 'yas-new-snippet)
 
-
 (global-set-key (kbd "C-c w e") (lambda () (interactive)
 				  (switch-to-buffer "english-writing-buffer")
 				  (text-mode)))
@@ -74,6 +73,11 @@
 				  (ispell-change-dictionary "svenska")))
 
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+(global-set-key (kbd "M-o") 'other-window)
+(global-set-key (kbd "<f1>") 'revert-this-buffer)
+(global-set-key (kbd "<f2>") 'rgrep)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 
 ;; Initial Mode

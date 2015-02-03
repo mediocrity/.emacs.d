@@ -42,3 +42,8 @@
       (let ((err (car (second elem))))
         (message "%s" (flymake-ler-text err)))))))
 
+;; http://www.masteringemacs.org/article/my-emacs-keybindings
+(defun revert-this-buffer ()
+  (interactive)
+  (revert-buffer nil t t)
+  (message (concat "Reverted buffer " (buffer-name))))
