@@ -24,11 +24,6 @@
 (ido-mode 1)
 
 
-;; Flymake
-(custom-set-faces '(flymake-errline ((((class color)) (:background "Black")))) 
-'(flymake-warnline ((((class color)) (:background "Gray50")))))
-
-
 ;; Loading init files
 (setq custom-file "~/.emacs.d/init_custom.el")
 (load custom-file)
