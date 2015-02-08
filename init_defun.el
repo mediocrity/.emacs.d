@@ -47,3 +47,8 @@
   (interactive)
   (revert-buffer nil t t)
   (message (concat "Reverted buffer " (buffer-name))))
+
+;; Function for installing Emacs python dependencies
+(defun update-python-dependencies ()
+    (interactive)
+    (shell-command "pip install -r ~/.emacs.d/install/python-req.txt"))
