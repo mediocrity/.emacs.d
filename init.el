@@ -78,6 +78,8 @@
 (global-set-key (kbd "<f1>") 'revert-this-buffer)
 (global-set-key (kbd "<f2>") 'rgrep)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-c p r") 'rename-file-and-buffer)
+(global-set-key (kbd "C-c p m") 'move-buffer-file)
 
 
 ;; Initial Mode
