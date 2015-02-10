@@ -55,10 +55,10 @@
 (global-set-key (kbd "<f9>") 'eshell)
 (global-set-key (kbd "C-<f9>") 'shell)
 
-(global-set-key (kbd "<f7>") 'kill-this-buffer)
+(global-set-key (kbd "<f10>") 'kill-this-buffer)
 
-(global-set-key (kbd "C-<f8>") 'point-to-register)
-(global-set-key (kbd "<f8>") 'jump-to-register)
+(global-set-key (kbd "C-<f7>") 'point-to-register)
+(global-set-key (kbd "<f7>") 'jump-to-register)
 
 (global-set-key (kbd "<f5>") 'yas-visit-snippet-file)
 (global-set-key (kbd "<C-f5>") 'yas-new-snippet)
@@ -72,7 +72,7 @@
 				  (text-mode)
 				  (ispell-change-dictionary "svenska")))
 
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "<f8>") 'ace-jump-mode)
 
 (global-set-key (kbd "M-o") 'other-window)
 (global-set-key (kbd "<f1>") 'revert-this-buffer)
