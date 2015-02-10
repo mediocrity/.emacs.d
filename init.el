@@ -24,6 +24,10 @@
 (ido-mode 1)
 
 
+(require 'zone)
+(zone-when-idle (* 60 20))
+
+
 ;; Loading init files
 (setq custom-file "~/.emacs.d/init_custom.el")
 (load custom-file)
