@@ -25,6 +25,7 @@
 		     omnisharp
 		     csharp-mode
 		     ace-jump-mode
+		     key-chord
 		     ))
 
 
