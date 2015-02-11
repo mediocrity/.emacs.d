@@ -14,5 +14,4 @@
 
 ;; yasnippet
 (yas-global-mode 1)
-(setq yas/indent-line nil)
 (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets")
