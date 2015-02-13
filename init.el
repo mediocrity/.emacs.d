@@ -52,6 +52,7 @@
 
 (global-set-key (kbd "C-c q w e ") (lambda () (interactive) (load-file "~/.emacs.d/init.el")))
 (global-set-key (kbd "C-c i n i t") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-c i n i l") (lambda () (interactive) (find-file "~/.emacs.d/init_local.el")))
 
 (global-set-key (kbd "C-c m d u") 'magit-diff-unstaged)
 (global-set-key (kbd "C-c m d s") 'magit-diff-staged)
