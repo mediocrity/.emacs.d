@@ -12,6 +12,9 @@
 (move-text-default-bindings)
 
 
+(ws-butler-global-mode)
+
+
 ;; yasnippet
 (yas-global-mode 1)
 (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets")

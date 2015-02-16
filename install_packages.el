@@ -26,6 +26,7 @@
 		     csharp-mode
 		     ace-jump-mode
 		     key-chord
+		     ws-butler
 		     ))
 
 
