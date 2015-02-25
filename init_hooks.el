@@ -11,7 +11,7 @@
 ;; html-mode
 (add-hook 'html-mode-hook 'turn-off-auto-fill)
 
-;; kv-mode 
+;; kv-mode
 (add-hook 'kivy-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
 ;; javascript-mode
@@ -26,3 +26,5 @@
 ;; c language
 (add-hook 'c-mode-hook 'linum-mode)
 
+;; snippet mode
+(add-hook 'snippet-mode-hook 'whitespace-mode)
