@@ -13,8 +13,16 @@
   (let (pos1 pos2 bounds (case-fold-search nil))
     (setq bounds (bounds-of-thing-at-point 'word))
     (setq pos1 (car bounds) pos2 (cdr bounds))
-    (if (string-match "^[a-z].*" (buffer-substring pos1 pos2)) 
-	(capitalize-region pos1 pos2) (downcase-region pos1 pos2))))
+    (if (string-match "^[a-z].*" (buffer-substring pos1 pos2))
+	(capitalize-region pos1 (+ pos1 1)) (downcase-region pos1 (+ pos1 1)))))
+
+(defun invert-case ()
+  (interactive)
+  (let (pos1 pos2 bounds (case-fold-search nil))
+    (setq bounds (bounds-of-thing-at-point 'word))
+    (setq pos1 (car bounds) pos2 (cdr bounds))
+    (if (string-match "^[a-z].*" (buffer-substring pos1 pos2))
+	(upcase-region pos1 pos2) (downcase-region pos1 pos2))))
 
 
 ;; Emacs Tranparency: http://www.emacswiki.org/emacs/TransparentEmacs
