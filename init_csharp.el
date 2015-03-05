@@ -29,8 +29,12 @@
 ;; hooks
 (add-hook 'csharp-mode-hook 'linum-mode)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
+(add-hook 'omnisharp-mode-hook (lambda ()
+				 (flycheck-mode)
+				 (flycheck-select-checker 'csharp-omnisharp-curl)))
 
 ;; keys
 (require 'csharp-mode)
 (define-key csharp-mode-map [tab] 'tab-indent-or-complete)
 (define-key csharp-mode-map (kbd "C-c r") 'omnisharp-rename)
+(define-key csharp-mode-map (kbd "C-c i") 'helm-imenu)
