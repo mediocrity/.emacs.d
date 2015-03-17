@@ -11,3 +11,6 @@
 (key-chord-define-global "`i" 'ispell-word)
 (key-chord-define-global "f\\" 'find-file)
 (key-chord-define-global "s\\" 'save-buffer)
+(key-chord-define-global "b\\" 'ido-switch-buffer)
+(key-chord-define-global "`m" 'ace-jump-mode-pop-mark)
+
