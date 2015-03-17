@@ -29,6 +29,7 @@
 ;; hooks
 (add-hook 'csharp-mode-hook 'linum-mode)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
+(add-hook 'csharp-mode-hook 'flyspell-prog-mode)
 (add-hook 'omnisharp-mode-hook (lambda ()
 				 (flycheck-mode)
 				 (flycheck-select-checker 'csharp-omnisharp-curl)))
