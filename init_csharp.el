@@ -1,9 +1,5 @@
-
 ;; Some tab resultion code
 ;; http://www.emacswiki.org/emacs/CompanyMode
-(add-hook 'csharp-mode-hook 'linum-mode)
-(add-hook 'csharp-mode-hook (lambda () (setq indent-tabs-mode nil)))
-
 (defun check-expansion ()
   (save-excursion
     (if (looking-at "\\_>") t
@@ -27,6 +23,7 @@
 	  (indent-for-tab-command)))))
 
 ;; hooks
+(add-hook 'csharp-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'csharp-mode-hook 'linum-mode)
 (add-hook 'csharp-mode-hook 'omnisharp-mode)
 (add-hook 'csharp-mode-hook 'flyspell-prog-mode)
