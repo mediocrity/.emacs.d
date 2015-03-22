@@ -38,4 +38,12 @@
 (require 'csharp-mode)
 (define-key csharp-mode-map [tab] 'tab-indent-or-complete)
 (define-key csharp-mode-map (kbd "C-c r") 'omnisharp-rename)
+(define-key csharp-mode-map (kbd "C-c a") 'omnisharp-run-code-action-refactoring)
+(define-key csharp-mode-map (kbd "C-c d") 'omnisharp-go-to-definition)
+(define-key csharp-mode-map (kbd "C-c q") 'omnisharp-code-format)
 (define-key csharp-mode-map (kbd "C-c i") 'helm-imenu)
+(define-key csharp-mode-map (kbd "C-c f") 'omnisharp-navigate-to-solution-file)
+
+;; Aliases
+(defalias 'usages 'omnisharp-find-usages)
+(defalias 'information 'omnisharp-current-type-information)
