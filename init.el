@@ -87,6 +87,11 @@
 (global-set-key (kbd "C-c p r") 'rename-file-and-buffer)
 (global-set-key (kbd "C-c p m") 'move-buffer-file)
 
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; Initial Mode
 (setq initial-major-mode 'eshell)

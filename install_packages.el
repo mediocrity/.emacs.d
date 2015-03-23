@@ -27,6 +27,8 @@
 		     ace-jump-mode
 		     key-chord
 		     ws-butler
+		     expand-region
+		     multiple-cursors
 		     ))
 
 

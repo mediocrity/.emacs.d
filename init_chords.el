@@ -13,4 +13,4 @@
 (key-chord-define-global "s\\" 'save-buffer)
 (key-chord-define-global "b\\" 'ido-switch-buffer)
 (key-chord-define-global "`m" 'ace-jump-mode-pop-mark)
-
+(key-chord-define-global "e\\" 'er/expand-region)
