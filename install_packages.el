@@ -29,6 +29,7 @@
 		     ws-butler
 		     expand-region
 		     multiple-cursors
+		     projectile
 		     ))
 
 
