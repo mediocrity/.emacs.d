@@ -13,10 +13,24 @@
                '("\\.py\\'" flymake-pylint-init)))
 
 
+(defun jedi-complete-with-isearch ()
+  (interactive)
+  (epc:sync (jedi:get-epc) (jedi:complete-request))
+  (if (> (length (jedi:ac-direct-matches)) 0)
+      (let ((completion (popup-menu* (jedi:ac-direct-matches)
+				     :width 30
+				     :margin-left 1
+				     :margin-right 1
+				     :scroll-bar t
+				     :isearch t
+				     :help-delay nil)))
+	(backward-kill-word 1)
+	(insert completion))))
+
 (defun indent-or-complete ()
   (interactive)
   (if (looking-at "\\_>")
-      (auto-complete)
+      (jedi-complete-with-isearch)
     (indent-according-to-mode)))
 
 ;; autopep8
