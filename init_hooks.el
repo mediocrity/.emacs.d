@@ -28,3 +28,6 @@
 
 ;; snippet mode
 (add-hook 'snippet-mode-hook 'whitespace-mode)
+
+;; haskell-mode
+(add-hook 'haskell-mode-hook 'haskell-indentation-mode)

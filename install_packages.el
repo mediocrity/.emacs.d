@@ -30,6 +30,7 @@
 		     expand-region
 		     multiple-cursors
 		     projectile
+		     haskell-mode
 		     ))
 
 
