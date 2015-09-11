@@ -12,8 +12,6 @@
 		     jinja2-mode
 		     kivy-mode
 		     magit
-		     git-rebase-mode
-		     git-commit-mode
 		     move-text
 		     popup
 		     rainbow-mode
