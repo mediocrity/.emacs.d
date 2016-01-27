@@ -48,9 +48,9 @@
 
 ;; bindings
 (require 'python)
-(define-key python-mode-map (kbd "C-c p d b") "import pdb; pdb.set_trace()")
+(define-key python-mode-map (kbd "C-c c p d b") "import pdb; pdb.set_trace()")
 (define-key python-mode-map (kbd "C-c n e") 'flymake-goto-next-error)
-(define-key python-mode-map (kbd "C-c p e p") 'py-autopep8)
+(define-key python-mode-map (kbd "C-c c p e p") 'py-autopep8)
 (define-key python-mode-map (kbd "C-c h") 'helm-pydoc)
 (define-key python-mode-map (kbd "C-c d") 'jedi:show-doc)
 (define-key python-mode-map (kbd "C-c e") 'jedi:goto-definition)
