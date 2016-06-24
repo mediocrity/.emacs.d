@@ -24,14 +24,7 @@
 				     :scroll-bar t
 				     :isearch t
 				     :help-delay nil)))
-	(backward-kill-word 1)
 	(insert completion))))
-
-(defun indent-or-complete ()
-  (interactive)
-  (if (looking-at "\\_>")
-      (jedi-complete-with-isearch)
-    (indent-according-to-mode)))
 
 ;; autopep8
 (setq py-autopep8-options '("--max-line-length=120"))
@@ -54,7 +47,7 @@
 (define-key python-mode-map (kbd "C-c h") 'helm-pydoc)
 (define-key python-mode-map (kbd "C-c d") 'jedi:show-doc)
 (define-key python-mode-map (kbd "C-c e") 'jedi:goto-definition)
-(define-key python-mode-map [tab] 'indent-or-complete)
+(define-key python-mode-map (kbd "<backtab>") 'jedi-complete-with-isearch)
 
 ;; Workaround for http://debbugs.gnu.org/cgi/bugreport.cgi?bug=15975
 (setq python-indent-offset 4)
