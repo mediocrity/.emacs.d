@@ -2,38 +2,34 @@
 
 ; list the packages you want
 (setq package-list '(
-		     go-mode
-		     jedi
+		     ace-jump-mode
 		     auto-complete
-		     epc
-		     ctable
-		     concurrent
-		     deferred
+		     company
+		     csharp-mode
+		     expand-region
+		     flycheck-rust
+		     flymake-jshint
+		     go-mode
+		     haskell-mode
+		     helm-pydoc
+		     jedi
 		     jinja2-mode
+		     key-chord
 		     kivy-mode
 		     magit
 		     move-text
-		     popup
-		     rainbow-mode
-		     window-numbering
-		     yasnippet
-		     py-autopep8
-		     flymake-jshint
-		     helm-pydoc
-		     omnisharp
-		     csharp-mode
-		     ace-jump-mode
-		     key-chord
-		     ws-butler
-		     expand-region
 		     multiple-cursors
+		     omnisharp
+		     popup
 		     projectile
-		     haskell-mode
-		     company
-		     flycheck-rust
+		     py-autopep8
 		     racer
+		     rainbow-mode
 		     rust-mode
 		     rustfmt
+		     window-numbering
+		     ws-butler
+		     yasnippet
 		     ))
 
 
