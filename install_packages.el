@@ -29,6 +29,11 @@
 		     multiple-cursors
 		     projectile
 		     haskell-mode
+		     company
+		     flycheck-rust
+		     racer
+		     rust-mode
+		     rustfmt
 		     ))
 
 

@@ -34,6 +34,7 @@
 
 (load "~/.emacs.d/init_external.el")
 (load "~/.emacs.d/init_python.el")
+(load "~/.emacs.d/init_rust.el")
 (load "~/.emacs.d/init_hooks.el")
 (load "~/.emacs.d/init_defun.el")
 (load "~/.emacs.d/init_csharp.el")
