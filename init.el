@@ -1,6 +1,8 @@
+(package-initialize)
+
 (column-number-mode t)
 (setq inhibit-startup-screen t)
-(scroll-bar-mode -1)
+(scroll-bar-mode nil)
 (show-paren-mode t)
 (size-indication-mode t)
 (tool-bar-mode -1)
