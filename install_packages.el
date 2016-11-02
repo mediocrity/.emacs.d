@@ -30,6 +30,7 @@
 		     window-numbering
 		     ws-butler
 		     yasnippet
+		     company-jedi
 		     ))
 
 
